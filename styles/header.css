@@ -114,11 +114,6 @@
   display: none;
 }
 
-.header__check:checked ~ .header__searchfield {
-  width: calc(100vw - 240px);
-  max-width: 750px;
-  visibility: visible;
-}
 
 .header__searchfield {
   position: absolute;
@@ -132,7 +127,13 @@
   border-bottom: 1px solid white;
   outline: none;
   visibility: hidden;
+  max-width: 750px;
   transition: visibility .5s, width .5s;
+}
+
+.header__check:checked ~ .header__searchfield {
+  width: calc(100vw - 240px);
+  visibility: visible;
 }
 
 .search__open {

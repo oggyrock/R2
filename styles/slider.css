@@ -1,0 +1,97 @@
+.slider {
+  position: relative;
+  padding: 60px;
+  margin-top: 140px;
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.deco-logo {
+  position: absolute;
+  top: -160px;
+  right: 100px;
+  font-family: 'San Francisco Mono Heavy', sans-serif;
+  font-size: 200px;
+  opacity: 0.2
+}
+
+.deco-logo::after {
+  content: '2';
+  position: absolute;
+  bottom: 20px;
+  right: -22px;
+  color: #D0021B;
+  font-size: 80px;
+}
+
+.slider__subheader {
+  font-family: 'San Francisco Pro Display Light Italic';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  color: #D0021B;
+  margin-bottom: 5px;
+}
+
+.slider__header {
+  font-family: 'San Francisco Pro Display Heavy';
+  font-size: 48px;
+}
+
+.slider__button {
+  height: 40px;
+  width: 240px;
+  font-family: 'San Francisco Pro Display Medium';
+  background-color: rgba(208, 2, 26, 0.1);
+  color: #D0021B;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  border-color: transparent;
+  margin-top: 20px;
+  transition: all .2s
+}
+
+.slider__button:hover {
+  background-color: #D0021B;
+  color: white;
+}
+
+.slider__arrows {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+}
+
+.slider__arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  border-color: transparent;
+  background-color: rgba(208, 2, 26, 0.1);
+  transition: background-color .2s;
+  outline: none;
+}
+
+.slider__arrow svg {
+  transition: fill .2s;
+}
+
+.slider__arrow:hover {
+  background-color: #D0021B;
+}
+.slider__arrow:hover svg {
+  fill: white;
+}
+
+.right {
+  margin-left: 10px;
+  transform: scaleX(-1);
+}
+
+.swiper-slide {
+  width: 100%;
+}
+

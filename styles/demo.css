@@ -1,0 +1,82 @@
+.demo {
+  background-color: white;
+  border-radius: 24px;
+}
+
+.demo__header {
+  font-family: 'San Francisco Pro Display Medium';
+  font-size: 14px;
+  color: #D0021B;
+  padding: 60px 60px 10px 60px;
+}
+
+.demo__text {
+  font-size: 18px;
+  color:#000000;
+  padding: 0 60px;
+}
+
+.demo__video {
+  position: relative;
+  width: 200px;
+  height: 140px;
+  background-image: url('https://cdn3.f-cdn.com/contestentries/602829/15127649/5784ce7856de7_thumb900.jpg');
+  background-size: cover;
+  margin: 10px 20px 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px  #cf021a4d; 
+  transition: transform .2s, box-shadow .2s;
+}
+
+.demo__video:hover {
+  transform: translate(6px, 6px);
+  box-shadow: 0 10px 20px #cf021a4d; 
+}
+
+.demo__video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cf021a80;
+  border-radius: 12px;
+}
+
+.demo__button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+  background-color: rgba(148, 140, 140, 0.5);
+  z-index: 2
+}
+
+.demo__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: white;
+  transition: transform .2s;
+}
+
+.demo__button:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.demo__button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #D0021B;
+}

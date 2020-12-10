@@ -1,0 +1,84 @@
+.questions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .questions {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+.benefits {
+  padding: 60px;
+  background-color: #0E1E31;
+  border-radius: 24px;
+  margin-bottom: 20px;
+}
+
+.benefits__header {
+  font-family: 'San Francisco Pro Display Heavy';
+  font-size: 48px;
+  color: #50E3C2;
+}
+
+.benefits__text {
+  font-size: 18px;
+  color: white;
+  margin: 20px 0;
+}
+
+.benefits__button {
+  font-family: 'San Francisco Pro Display Medium';
+  width: 230px;
+  height: 40px;
+  color: #50E3C2;
+  text-transform: uppercase;
+  background-color: rgba(80, 226, 195, 0.1);
+  border-color: transparent;
+  border-radius: 8px;
+  transition: color .2s, background-color .2s;
+}
+
+.benefits__button:hover {
+  background-color: #50E3C2;
+  color: #0E1E31;
+}
+
+.question {
+  padding: 60px;
+  background-color: #0E1E31;
+  border-radius: 24px;
+  margin-bottom: 20px;
+}
+
+.question__header {
+  font-family: 'San Francisco Pro Display Heavy';
+  font-size: 48px;
+  color: #50E3C2;
+}
+
+.question__text {
+  font-size: 18px;
+  color: white;
+  margin: 20px 0;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  border-radius: 24px;
+  background-color: #D0021B;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contacts__text {
+  font-family: 'San Francisco Pro Display Medium';
+  font-size: 18px;
+}

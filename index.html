@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R2 Digital Library</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -13,6 +14,7 @@
           <div class="R2">R</div>
           <div class="dl">Digital Library</div>
         </a>
+        <input class="menu-check" id="menu-check" type="checkbox">
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#">Browse</a></li>
@@ -23,26 +25,41 @@
           </ul>
         </nav>
         <div class="header__buttons">
-          <button class="header__button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </button>
-          <button class="header__button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></svg>
-          </button>
+          <input class="header__check" type="checkbox" id="searchfield">
+          <input class="header__searchfield" type="text">
+          <label for="searchfield" class="header__button search">
+            <svg class="search__open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <svg class="search__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          </label>
+          <label for="menu-check" class="header__button user">
+            <svg class="user__desktop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></svg>
+            <svg class="user__mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            <svg class="user__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          </label>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="slider">
-        <div class="deco-logo">R</div>
-        <span class="slider__subheader">Dont just take our word for it!</span>
-        <h2 class="slider__header">Read librarian rewiews</br> of the R2 Digital Library</h2>
-        <button class="slider__button">Go to the reviews section</button>
+        <div class="swiper-wrapper">
+          <div class="slider__item swiper-slide">
+            <div class="deco-logo">R</div>
+            <span class="slider__subheader">Dont just take our word for it!</span>
+            <h2 class="slider__header">Read librarian rewiews</br> of the R2 Digital Library</h2>
+            <button class="slider__button">Go to the reviews section</button>
+          </div>
+          <div class="slider__item swiper-slide">
+            <div class="deco-logo">R</div>
+            <span class="slider__subheader">Dont just take our word for it!</span>
+            <h2 class="slider__header">Read librarian rewiews</br> of the R2 Digital Library</h2>
+            <button class="slider__button">Go to the reviews section</button>
+          </div>
+        </div>
         <div class="slider__arrows">
-          <button class="slider__arrow">
+          <button class="slider__arrow slider__prev">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D0021B" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/></svg>
           </button>
-          <button class="slider__arrow right">
+          <button class="slider__arrow slider__next right">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D0021B" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/></svg>
           </button>
         </div>
@@ -65,43 +82,138 @@
           </div>
         </div>
       </div>
-      <div class="carousel-recently">
+      <div class="carousel-recently swiper-container">
         <h2 class="carousel__header">Recently added</h2>
-        <div class="carousel__container">
-          <div class="carousel__item ">
-            <img src="" alt="">
-            <p>Sepsis Management in Resource-limited Settings</p>
+        <div class="carousel__arrow prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D0021B" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/></svg>
+        </div>
+        <div class="carousel__container swiper-wrapper">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book1.jpg" alt="">
+            <p class="card__text">Sepsis Management in Resource-limited Settings</p>
           </div>
-          <div class="carousel__item card">
-            <img class="card__image" src="" alt="">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book2.jpg" alt="">
             <p class="card__text">Tuberculosis in Adults and Children</p>
           </div>
-          <div class="carousel__item">
-            <img class="card__image" src="" alt="">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book3.jpg" alt="">
             <p class="card__text">Red Book Atlas of Pediatric Infectious Diseases</p>
           </div>
-          <div class="carousel__item">
-            <img class="card__image" src="" alt="">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book4.jpg" alt="">
             <p class="card__text">Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diceases</p>
           </div>
-          <div class="carousel__item">
-            <img class="card__image" src="" alt="">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book3.jpg" alt="">
             <p class="card__text">Red Book Atlas of Pediatric Infectious Diseases</p>
           </div>
-          <div class="carousel__item">
-            <img class="card__image" src="" alt="">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book2.jpg" alt="">
             <p class="card__text">Tuberculosis in Adults and Children</p>
           </div>
-          <div class="carousel__item">
-            <img class="card__image" src="" alt="">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book1.jpg" alt="">
             <p class="card__text">Sepsis Management in Resource-limited Settings</p>
           </div>
         </div>
+        <div class="carousel__arrow right next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D0021B" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/></svg>
+        </div>
       </div>
-      <div class="tiles"></div>
-      <div class="carousel-popular"></div>
-      <div class="featured"></div>
-      <div class="questions"></div>
+      <div class="tiles">
+        <div class="expand">
+          <h2 class="expand__header">Expand Your Library Beyond eBooks...</h2>
+          <div class="expand__column">
+            <p class="expand__text">The R2 Digital Library is a web based database available from Rittenhouse Book Distributors. It offers fully integrated and searchable medical, nursing and allied health source book content from key health science publishers, on a web based platform.</p>
+            <button class="expand__button">See full list of titles</button>
+          </div>
+        </div>
+        <div class="tiles__container">
+          <div class="tiles__item tile">
+            <img class="tile__icon" src="./assets/group_add.svg" alt="group add icon">
+            <p class="tile__text">Connect your users with essential health sciences content from the leading publishers - on a platform designed to enhance it</p>
+          </div>
+          <div class="tiles__item tile">
+            <img class="tile__icon" src="./assets/control.svg" alt="control icon">
+            <p class="tile__text">Select resources at the title level and pay once for life of edition access</p>
+          </div>
+          <div class="tiles__item tile">
+            <img class="tile__icon" src="./assets/layers.svg" alt="layers icon">
+            <p class="tile__text">Explore consortia, patron driven Acquisition and turnkey collection development solutions</p>
+          </div>
+          <div class="tiles__item tile">
+            <img class="tile__icon" src="./assets/library.svg" alt="library icon">
+            <p class="tile__text">Incorporate workflow, integration and collaboration tools designed for the contemporary library</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-popular swiper-container">
+        <h2 class="carousel__header">Popular</h2>
+        <div class="carousel__arrow prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D0021B" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/></svg>
+        </div>
+        <div class="carousel__container swiper-wrapper">
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book1.jpg" alt="">
+            <p class="card__text">Sepsis Management in Resource-limited Settings</p>
+          </div>
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book2.jpg" alt="">
+            <p class="card__text">Tuberculosis in Adults and Children</p>
+          </div>
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book3.jpg" alt="">
+            <p class="card__text">Red Book Atlas of Pediatric Infectious Diseases</p>
+          </div>
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book4.jpg" alt="">
+            <p class="card__text">Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diceases</p>
+          </div>
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book3.jpg" alt="">
+            <p class="card__text">Red Book Atlas of Pediatric Infectious Diseases</p>
+          </div>
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book2.jpg" alt="">
+            <p class="card__text">Tuberculosis in Adults and Children</p>
+          </div>
+          <div class="carousel__item card swiper-slide">
+            <img class="card__image" src="./assets/book1.jpg" alt="">
+            <p class="card__text">Sepsis Management in Resource-limited Settings</p>
+          </div>
+        </div>
+        <div class="carousel__arrow right next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D0021B" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"/></svg>
+        </div>
+      </div>
+      <div class="featured">
+        <div class="featured__container">
+          <span class="featured__subheader">Featured publisher</span>
+          <h4 class="featured__header">Health Administration Press</h4>
+          <button class="featured__button">See full list of titles</button>
+        </div>
+        <div class="featured__image-wrapper">
+          <img class="featured__image" src="./assets/liderazgo-resiliencia-portada.jpg" alt="">
+        </div>
+      </div>
+      <div class="questions">
+        <div class="benefits">
+          <h4 class="benefits__header">Benefits of eContent and the R2 Digital Library</h4>
+          <p class="benefits__text">If you’ve been thinking of including digital content into your library collection, but haven’t yet made the switch, here are answers to some very common questions about the benefits of using eContent and the R2 Digital Library as your platform.</p>
+          <button class="benefits__button">visit our help section</button>
+        </div>
+        <div class="questions__container">
+          <div class="question">
+            <h4 class="question__header">Does the R2 Library have the Titles I need?</h4>
+            <p class="question__text">We have thousands of resources from the leading health sciences publishers, so chances are, the answer is yes. To be sure, use the search function at the top of the page to access a listing of active R2 titles.</p>
+          </div>
+          <div class="contacts">
+            <img src="./assets/help.svg" alt="">
+            <span class="contacts__text">1.800.345.6425 X601 / info@r2library.com</span>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <span class="footer__copy">&copy; 2003 - 2020 Rittenhouse Book Distributors, Inc. All rights reserved</span>
@@ -120,5 +232,47 @@
         </li>
       </ul>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const slider = new Swiper('.slider', {
+        slidesPerView: 1,
+        spaceBetween: 60,
+        loop: true,
+        navigation: {
+          nextEl: '.slider__next',
+          prevEl: '.slider__prev',
+        },
+      });
+      const mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: document.documentElement.clientWidth > 720 ? 4 : 2,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.next',
+          prevEl: '.prev',
+          disabed: '.disabled',
+        },
+      });
+      console.log(mySwiper);
+      window.addEventListener('resize', function(){
+        if(document.documentElement.clientWidth > 700) {
+          mySwiper[0].params.slidesPerView = 4;
+          mySwiper[1].params.slidesPerView = 4;
+        } else {
+          mySwiper[0].params.slidesPerView = 2;
+          mySwiper[1].params.slidesPerView = 2;
+        };
+      });
+    </script>
+    <script>
+      const bookNames = [...document.querySelectorAll('.card__text')];
+      bookNames.forEach(name => {
+        while(name.innerText.length > 50) {
+          name.innerText = name.innerText.split(' ').slice(0, -1).join(' ') + '...';
+        }
+      })
+    </script>
+    <script>
+      
+    </script>
   </body>
 </html>

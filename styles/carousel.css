@@ -1,0 +1,122 @@
+.carousel-recently,
+.carousel-popular {
+  position: relative;
+  margin: 80px -16px 40px;
+  padding: 0 16px 40px;
+}
+
+.carousel__arrow svg {
+  transform: translate(50%, 50%)
+}
+
+.carousel__header {
+  font-family: 'San Francisco Pro Display Heavy';
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+
+.carousel__arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  border-color: transparent;
+  background-color: rgba(208, 2, 26, 0.1);
+  transition: background-color .2s;
+}
+
+.prev {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  z-index: 2;
+}
+
+.next {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  z-index: 2;
+}
+
+.carousel__arrow svg {
+  transition: fill .2s;
+}
+
+.carousel__arrow:hover {
+  background-color: #D0021B;
+}
+
+.carousel__arrow:hover svg {
+  fill: white;
+}
+
+.swiper__wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.carousel__item {
+  min-height: 224px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.carousel__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card__text {
+  font-family: 'San Francisco Pro Display Medium';
+  margin-top: 13px;
+  font-size: 18px;
+  transition: color .2s;
+}
+
+.carousel__item:hover .card__text {
+  color: #D0021B;
+}
+
+.card__image {
+  width: 80px;
+  height: 80px;
+  background-position: top;
+  background-size: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    padding: 0;
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  .card__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card__text {
+    display: none;
+  }
+}
+
+.swiper-button-disabled {
+  background-color: #4a4a4a1a;
+}
+
+.swiper-button-disabled:hover {
+  background-color: #4a4a4a1a;
+}
+
+.swiper-button-disabled svg {
+  fill: black;
+}
+
+.swiper-button-disabled:hover svg {
+  fill: black;
+}
